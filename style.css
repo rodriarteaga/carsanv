@@ -19,8 +19,8 @@
 #card p {
    font-size: 1.3em;
    text-align: left;
-   padding-left: 30px; /* Espacio en blanco a la izquierda */
-   padding-right: 30px; /* Espacio en blanco a la derecha */
+   padding-left: 30px; 
+   padding-right: 30px; 
 }
 
 
@@ -28,7 +28,6 @@
    background:#eee;
    height:550px;
    width:400px;
-/*    border:1px solid red; */
    padding:10px;
 }
 .side.one {
