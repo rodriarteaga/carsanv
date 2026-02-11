@@ -24,6 +24,8 @@
    flex-direction: column; /* Para que el texto se apile hacia abajo en móvil */
    visibility: hidden;
    overflow-y: auto;    /* Por si el texto es muy largo, permite hacer scroll */
+   backface-visibility: hidden; /* Ayuda a que la animación sea fluida */
+   display: none; /* Cambia visibility:hidden por display:none para evitar clics fantasma */
 }
 
 #card h2 {
@@ -57,14 +59,27 @@
 }*/
 
 .side.one {
+   width: 50%; /* Usa porcentajes */
+   transform: skew(0deg, 5deg); /* Inclinación más suave para que no rompa el diseño */
+   background: linear-gradient(90deg, #fff, #fff 40%, #ddd);
+}
+
+/*.side.one {
    width:320px;
    transform:skew(10deg,20deg);
    background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
-}
+}*/
+
 .side.two {
+   width: 50%; 
+   transform: skew(0deg, -5deg);
+   background: linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
+}
+
+/*.side.two {
    transform:skew(10deg,-15deg);
    background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
-}
+}*/
 
 body {
    display: flex;
@@ -176,7 +191,7 @@ body {
  
  .text {
    position: absolute;
-   font-family: "Homer Simpson UI";
+   font-family: Arial;
    letter-spacing:5px;
    text-align: center;
    color: white;
