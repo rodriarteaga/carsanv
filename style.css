@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 
-/*#card {
+#card {
    height:500px;
    width:800px;
    margin:5em auto;
@@ -9,25 +9,7 @@
    left: 25%;
    display:flex;
    visibility:hidden;
-}*/
-
-#card {
-   height: auto;        /* Deja que el alto se ajuste al contenido */
-   max-height: 90vh;    /* Pero que no se pase del 90% de la pantalla */
-   width: 90vw;         /* Que ocupe el 90% del ancho del celular */
-   margin: 1em auto;
-   position: fixed;
-   top: 50%;            /* Centrado vertical */
-   left: 50%;           /* Centrado horizontal */
-   transform: translate(-50%, -50%); /* Truco para centrar perfectamente */
-   display: flex;
-   flex-direction: column; /* Para que el texto se apile hacia abajo en móvil */
-   visibility: hidden;
-   overflow-y: auto;    /* Por si el texto es muy largo, permite hacer scroll */
-   backface-visibility: hidden; /* Ayuda a que la animación sea fluida */
-   display: none; /* Cambia visibility:hidden por display:none para evitar clics fantasma */
 }
-
 #card h2 {
    font-size:3em;
    margin:0;
@@ -41,45 +23,23 @@
    padding-right: 30px; /* Espacio en blanco a la derecha */
 }
 
+
 .side {
-   background: #eee;
-   height: auto;        /* Que el fondo crezca con el texto */
-   width: 100%;         /* Que use todo el ancho disponible de la tarjeta */
-   padding: 20px;
-   box-sizing: border-box; /* Para que el padding no "infle" la tarjeta */
-}
-
-
-/*.side {
    background:#eee;
    height:550px;
    width:400px;
-    border:1px solid red; 
+/*    border:1px solid red; */
    padding:10px;
-}*/
-
-.side.one {
-   width: 50%; /* Usa porcentajes */
-   transform: skew(0deg, 5deg); /* Inclinación más suave para que no rompa el diseño */
-   background: linear-gradient(90deg, #fff, #fff 40%, #ddd);
 }
-
-/*.side.one {
+.side.one {
    width:320px;
    transform:skew(10deg,20deg);
    background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
-}*/
-
-.side.two {
-   width: 50%; 
-   transform: skew(0deg, -5deg);
-   background: linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
 }
-
-/*.side.two {
+.side.two {
    transform:skew(10deg,-15deg);
    background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
-}*/
+}
 
 body {
    display: flex;
@@ -191,7 +151,7 @@ body {
  
  .text {
    position: absolute;
-   font-family: Arial;
+   font-family: "Homer Simpson UI";
    letter-spacing:5px;
    text-align: center;
    color: white;
@@ -208,9 +168,3 @@ body {
  .valentines-day:hover .text {
    transform: translateY(-50px);
  }
-
- @media (max-width: 600px) {
-  .valentines-day {
-    transform: scale(0.7); /* Reduce el sobre al 70% solo en celulares */
-  }
-}
